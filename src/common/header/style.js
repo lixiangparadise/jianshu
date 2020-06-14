@@ -83,6 +83,7 @@ export const NavSearch = styled.input.attrs({
 	&.focused {
 		width: 240px;
 	}
+	// 设置动画	
 	&.slide-enter {
 		transition: all .2s ease-out;
 	}

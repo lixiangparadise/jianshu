@@ -3,6 +3,7 @@ css 文件只要被引入就是全局的，不局限在某个文件，所以使�
 安装：`npm install --save styled-components`
 
 2. 放入reset样式
+3. 动画：`npm install react-transition-group`
 
 
 注意：class -> className
