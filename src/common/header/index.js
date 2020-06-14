@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { HeaderWrapper, Logo, 
   Nav, NavItem, NavSearch, 
-  Addition,Button, SearchWrapper } from './style';
+  Addition, Button, SearchWrapper } from './style';
 class Header extends Component{
     render(){
         return (
@@ -15,20 +15,22 @@ class Header extends Component{
                       <i className="iconfont">&#xe636;</i>
                     </NavItem>
                     <SearchWrapper>
-                      <i className="iconfont">&#xe614;</i>
                       <NavSearch></NavSearch>
+                      <i className="iconfont zoom">&#xe614;</i>
                     </SearchWrapper>
                     
                 </Nav>
                 <Addition>
-                  <Button class="writting">
+                  <Button className="writting">
                     <i className="iconfont">&#xe615;</i>
                     写文章
                   </Button>
-                  <Button class="reg">注册</Button>
+                  <Button className="reg">注册</Button>
                 </Addition>
             </HeaderWrapper>
         )
     }
 }
 export default Header;
+
+
