@@ -32,4 +32,8 @@ import { default as foo } from 'modules'; // 等同于 import foo from 'modules'
 5. 改变数据：mapDispatchToProps将dispatch方法映射到props中，首先创建一个action，使用传入的参数dispatch将此action传递给reducer，在reducer中根据action修改redux中的数据，并且返回新的数据给store。
 
 
-redux-devtools-extension： 在浏览器中可以使用redux插件
+redux-devtools-extension： 在浏览器中可以使用redux插件 github
+
+
+将reducer拆分成多个reducer，即当前文件夹下，最后使用combineReducers组合
+

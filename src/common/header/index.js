@@ -60,14 +60,15 @@ class Header extends Component{
 
 //将原先state中数据放在reducer中，然后此组件若想使用则写在该方法中
 const mapStateToProps = (state)=>{
-    console.log(state)
+    // console.log(state)
     return {
-      focused: state.focused  //此时store中的数据映射到props中
+      //分成小reducer后需要从子级目录取值
+      focused: state.header.focused  //此时store中的数据映射到props中
     }
 }
 // 组件改变store中的内容  使用dispatch方法 
 const mapDispatchToProps = (dispatch)=>{
-  console.log(dispatch)
+  // console.log(dispatch)
   return {
     handleInputFocus(){
       //1. action
