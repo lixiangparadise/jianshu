@@ -4,6 +4,9 @@ import { HeaderWrapper, Logo,
   Nav, NavItem, NavSearch, 
   Addition, Button, SearchWrapper } from './style';
 import {connect} from 'react-redux';
+// import * as actionCreators from './store/actionCreator';
+import {actionCreators} from './store'
+
 class Header extends Component{
   constructor(props){
     super(props);
@@ -72,17 +75,19 @@ const mapDispatchToProps = (dispatch)=>{
   return {
     handleInputFocus(){
       //1. action
-      const action = {
-        type: 'search_focus'
-      };
+      // const action = {
+      //   type: 'search_focus'
+      // };
+      const action = actionCreators.searchFocus();
       //2. dispath
       dispatch(action);
     },
     handleInputBlur(){
       //1. action
-      const action = {
-        type: 'search_blur'
-      };
+      // const action = {
+      //   type: 'search_blur'
+      // };
+      const action = actionCreators.searchBlur();
       //2. dispath
       dispatch(action);
     }

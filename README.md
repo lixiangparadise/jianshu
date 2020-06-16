@@ -37,3 +37,5 @@ redux-devtools-extension： 在浏览器中可以使用redux插件 github
 
 将reducer拆分成多个reducer，即当前文件夹下，最后使用combineReducers组合
 
+
+将action中的常量保存起来，创建constansts文件，创建action使用actionCreator文件
