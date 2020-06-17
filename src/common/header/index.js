@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {CSSTransition} from 'react-transition-group'
 import { HeaderWrapper, Logo, 
-  Nav, NavItem, NavSearch, 
+  Nav, NavItem, SearchInfo, NavSearch, 
   Addition, Button, SearchWrapper } from './style';
 import {connect} from 'react-redux';
 // import * as actionCreators from './store/actionCreator';
@@ -66,7 +66,13 @@ const mapStateToProps = (state)=>{
     // console.log(state)
     return {
       //分成小reducer后需要从子级目录取值
-      focused: state.header.focused  //此时store中的数据映射到props中
+      // focused: state.header.focused  //此时store中的数据映射到props中
+      //imutable 获取方式
+      // focused: state.header.get('focused') //state.header是js获取方式，.get是immutable获取方式，所以为了统一使用redux-immutable
+      //改为redux-immutable后的方法
+      // focused: state.get('header').get('focused')
+      //等价于
+      focused: state.getIn(['header','focused'])
     }
 }
 // 组件改变store中的内容  使用dispatch方法 
